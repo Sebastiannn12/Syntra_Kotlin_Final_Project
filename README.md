@@ -1,6 +1,6 @@
-# Account Portal - Kotlin + PHP + MySQL
+# Syntra Account Portal - Kotlin + PHP + MySQL
 
-Account Portal is a complete Internet-backed user account management app built from the provided Android sample and the required course guide.
+Syntra Account Portal is a complete Internet-backed user account management app built from the provided Android sample and the required course guide.
 
 ## What is included
 

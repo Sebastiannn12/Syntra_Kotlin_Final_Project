@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Account Portal</string>
+    <string name="app_name">Syntra Account Portal</string>
 
     <!--  FOR GENERAL USE  -->
     <string name="home">Home</string>
@@ -76,5 +76,5 @@
     <string name="network_body">Every account shown in the directory is loaded from the hosted MySQL database through Retrofit.</string>
     <string name="directory_title">Community directory</string>
     <string name="directory_body">A searchable RecyclerView keeps account management quick and accessible.</string>
-    <string name="about_message">Account Portal combines Kotlin, XML, ViewBinding, Retrofit, RecyclerView, DialogFragments, SharedPreferences, PHP PDO, and MySQL in one complete project.</string>
+    <string name="about_message">Syntra Account Portal combines Kotlin, XML, ViewBinding, Retrofit, RecyclerView, DialogFragments, SharedPreferences, PHP PDO, and MySQL in one complete project.</string>
 </resources>
