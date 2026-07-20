@@ -5,5 +5,7 @@
 **/build/
 local.properties
 server/android_sample_api/config.php
+server/android_sample_api/uploads/*
+!server/android_sample_api/uploads/.htaccess
 tmp/
 *.iml

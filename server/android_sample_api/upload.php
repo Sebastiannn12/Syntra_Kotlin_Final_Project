@@ -31,7 +31,10 @@ if (!move_uploaded_file($photo['tmp_name'], $directory . '/' . $filename)) {
     respond(['success' => false, 'message' => 'Photo upload failed'], 500);
 }
 
-$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$forwardedProto = strtolower(trim(explode(',', $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')[0]));
+$scheme = $forwardedProto === 'https' || (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+    ? 'https'
+    : 'http';
 $path = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 $url = $scheme . '://' . $_SERVER['HTTP_HOST'] . $path . '/uploads/' . $filename;
 respond(['success' => true, 'message' => 'Photo uploaded', 'photo' => $url]);

@@ -16,6 +16,7 @@ Account Portal is a complete Internet-backed user account management app built f
 - Retrofit repository and lifecycle-aware ViewModel state
 - PHP PDO API with prepared statements and password hashing
 - MySQL schema with unique username/email constraints and expiring API tokens
+- Railway-ready PHP/Apache container, database health check, and environment-variable configuration
 - Material 3 home, dashboard, notification, authentication, and management screens with an Android splash screen
 
 The Android app never contains MySQL credentials and never connects directly to MySQL. It communicates only with the hosted PHP API.
@@ -37,6 +38,8 @@ API_BASE_URL=https://YOUR_DOMAIN/android_sample_api/
 ```
 
 The URL must use HTTPS and must end with `/`. Rebuild the app after changing it.
+
+For Railway, use `https://YOUR_DOMAIN.up.railway.app/android_sample_api/`. See `HOSTING_SETUP.md` for the exact `DB_*` reference variables and persistent upload volume path.
 
 ## Local verification commands
 
@@ -66,5 +69,6 @@ GRADLE_USER_HOME="$PWD/.gradle-user" ./gradlew testDebugUnitTest assembleDebug l
 - `POST password.php?action=reset&id=ID`
 - `GET stats.php`
 - `POST upload.php` using multipart field `photo`
+- `GET health.php` (deployment/database health check; no authentication required)
 
 All routes except login and registration require `Authorization: Bearer TOKEN`.

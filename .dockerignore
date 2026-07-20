@@ -1,0 +1,11 @@
+.git
+.github
+.gradle
+.gradle-user
+.idea
+.kotlin
+**/build
+local.properties
+release
+*.iml
+server/android_sample_api/config.php
