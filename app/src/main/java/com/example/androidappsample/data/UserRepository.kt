@@ -100,8 +100,12 @@ class UserRepository {
                     .asJsonObject.get("message")?.asString
             }.getOrNull()
             throw IllegalStateException(message ?: "Server error ${error.code()}")
-        } catch (_: IOException) {
-            throw IllegalStateException("No Internet connection or the hosted server is unavailable")
+        } catch (error: IOException) {
+            val timedOut = error.message?.contains("timeout", ignoreCase = true) == true
+            throw IllegalStateException(
+                if (timedOut) "The connection timed out. Check the emulator Internet connection and try again."
+                else "No Internet connection or the hosted server is unavailable"
+            )
         }
     }
 }
