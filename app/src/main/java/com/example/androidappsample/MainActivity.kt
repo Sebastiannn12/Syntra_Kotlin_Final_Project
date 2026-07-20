@@ -165,7 +165,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun createNotificationChannel() {
         val channel = NotificationChannel(channelId, "Demo channel", NotificationManager.IMPORTANCE_DEFAULT)
-            .apply { description = "Syntra Account Portal updates" }
+            .apply { description = "Syntra updates" }
         getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
     }
 
