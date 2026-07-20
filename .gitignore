@@ -1,0 +1,9 @@
+.gradle/
+.gradle-user/
+.idea/
+.kotlin/
+**/build/
+local.properties
+server/android_sample_api/config.php
+tmp/
+*.iml

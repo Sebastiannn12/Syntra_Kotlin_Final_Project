@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_soft">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:title="@string/create_account"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                style="@style/TextAppearance.Material3.HeadlineSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/join_community"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/register_subtitle"
+                android:textColor="@color/text_secondary" />
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutUsername" style="@style/AppInput" android:hint="@string/username">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputUsername" style="@style/AppInputEdit" android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutFirstName" style="@style/AppInput" android:hint="@string/first_name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputFirstName" style="@style/AppInputEdit" android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutMiddleName" style="@style/AppInput" android:hint="@string/middle_name_optional">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputMiddleName" style="@style/AppInputEdit" android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutLastName" style="@style/AppInput" android:hint="@string/last_name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputLastName" style="@style/AppInputEdit" android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutEmail" style="@style/AppInput" android:hint="@string/email">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputEmail" style="@style/AppInputEdit" android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutPassword" style="@style/AppInput" android:hint="@string/password" app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputPassword" style="@style/AppInputEdit" android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <ProgressBar android:id="@+id/progressStrength" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="8dp" android:max="5" android:progress="0" />
+            <TextView android:id="@+id/textStrength" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/password_weak" android:textColor="@color/text_secondary" android:textSize="12sp" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutConfirmPassword" style="@style/AppInput" android:hint="@string/confirm_password" app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputConfirmPassword" style="@style/AppInputEdit" android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/create_my_account"
+                app:cornerRadius="16dp" />
+            <ProgressBar android:id="@+id/progressBar" android:layout_width="32dp" android:layout_height="32dp" android:layout_gravity="center_horizontal" android:layout_marginTop="12dp" android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

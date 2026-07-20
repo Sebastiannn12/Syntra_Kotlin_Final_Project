@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} ^(.+)$
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%1]
+
+<FilesMatch "^(config\.php|config\.example\.php)$">
+    Require all denied
+</FilesMatch>

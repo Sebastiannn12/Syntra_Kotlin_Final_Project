@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_users"
+        android:icon="@drawable/users"
+        android:title="@string/users"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_profile"
+        android:title="@string/profile"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_edit_profile"
+        android:title="Edit my profile"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_change_password"
+        android:title="Change password"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_notify"
+        android:title="@string/notify"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/logout"
+        app:showAsAction="never" />
+</menu>

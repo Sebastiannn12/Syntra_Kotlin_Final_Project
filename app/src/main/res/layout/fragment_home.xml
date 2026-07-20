@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_soft">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="28dp" app:cardElevation="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/hero_background" android:orientation="vertical" android:padding="26dp">
+                <TextView android:id="@+id/textGreeting" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="30sp" android:textStyle="bold" />
+                <TextView android:id="@+id/textHandle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="#DDE5FF" android:textSize="14sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Your hosted account workspace is ready." android:textColor="@color/white" android:textSize="18sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/buttonDirectory" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/open_directory" app:icon="@drawable/users" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView style="@style/TextAppearance.Material3.TitleLarge" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="Built for real account management" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="14dp" android:text="The app connects classroom concepts into a complete end-to-end experience." android:textColor="@color/text_secondary" />
+
+        <include layout="@layout/view_feature_security" />
+        <include layout="@layout/view_feature_network" />
+        <include layout="@layout/view_feature_directory" />
+    </LinearLayout>
+</ScrollView>

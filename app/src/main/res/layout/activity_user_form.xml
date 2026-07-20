@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_soft">
+
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="0dp" android:layout_height="wrap_content" android:background="@color/white" app:navigationIcon="?attr/homeAsUpIndicator" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView android:layout_width="0dp" android:layout_height="0dp" android:fillViewport="true" app:layout_constraintTop_toBottomOf="@id/toolbar" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+            <TextView style="@style/TextAppearance.Material3.HeadlineSmall" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Account information" android:textStyle="bold" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:text="Required fields are validated before the data is sent securely to the server." android:textColor="@color/text_secondary" />
+
+            <ImageView android:id="@+id/imagePreview" android:layout_width="88dp" android:layout_height="88dp" android:layout_gravity="center_horizontal" android:background="@drawable/avatar_gradient" android:contentDescription="Profile photo preview" android:padding="18dp" android:scaleType="centerCrop" android:src="@drawable/user" app:tint="@null" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/buttonChoosePhoto" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="10dp" android:text="@string/choose_photo" />
+            <TextView android:id="@+id/textPhotoStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:textColor="@color/text_secondary" android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutUsername" style="@style/AppInput" android:hint="@string/username"><com.google.android.material.textfield.TextInputEditText android:id="@+id/inputUsername" style="@style/AppInputEdit" /></com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutFirstName" style="@style/AppInput" android:hint="@string/first_name"><com.google.android.material.textfield.TextInputEditText android:id="@+id/inputFirstName" style="@style/AppInputEdit" android:inputType="textCapWords" /></com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutMiddleName" style="@style/AppInput" android:hint="@string/middle_name_optional"><com.google.android.material.textfield.TextInputEditText android:id="@+id/inputMiddleName" style="@style/AppInputEdit" android:inputType="textCapWords" /></com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutLastName" style="@style/AppInput" android:hint="@string/last_name"><com.google.android.material.textfield.TextInputEditText android:id="@+id/inputLastName" style="@style/AppInputEdit" android:inputType="textCapWords" /></com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutEmail" style="@style/AppInput" android:hint="@string/email"><com.google.android.material.textfield.TextInputEditText android:id="@+id/inputEmail" style="@style/AppInputEdit" android:inputType="textEmailAddress" /></com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutPassword" style="@style/AppInput" android:hint="@string/password" app:endIconMode="password_toggle"><com.google.android.material.textfield.TextInputEditText android:id="@+id/inputPassword" style="@style/AppInputEdit" android:inputType="textPassword" /></com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutPhoto" style="@style/AppInput" android:hint="@string/photo_url_optional"><com.google.android.material.textfield.TextInputEditText android:id="@+id/inputPhoto" style="@style/AppInputEdit" android:inputType="textUri" /></com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/buttonSave" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="20dp" android:text="@string/save" app:cornerRadius="16dp" />
+            <ProgressBar android:id="@+id/progressBar" android:layout_width="32dp" android:layout_height="32dp" android:layout_gravity="center_horizontal" android:layout_marginTop="12dp" android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

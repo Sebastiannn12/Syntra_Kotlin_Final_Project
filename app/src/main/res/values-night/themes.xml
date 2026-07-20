@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AndroidAppSample" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#AFC6FF</item>
+        <item name="colorSecondary">#CAB7FF</item>
+        <item name="colorTertiary">#FFB68A</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>
