@@ -70,5 +70,11 @@ function requireAuthenticatedUser(PDO $pdo): array
 function publicUser(array $row): array
 {
     unset($row['password']);
+    if (isset($row['id'])) {
+        $row['id'] = (int) $row['id'];
+    }
+    if (isset($row['is_active'])) {
+        $row['is_active'] = (bool) $row['is_active'];
+    }
     return $row;
 }
